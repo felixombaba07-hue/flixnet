@@ -1,0 +1,1 @@
+exports.handler=async(event)=>{if(event.httpMethod!=="POST")return{statusCode:405,body:"Method not allowed"};if(!process.env.PAYSTACK_SECRET_KEY)return{statusCode:500,body:"Webhook secret not configured"};return{statusCode:200,body:"ok"}};
